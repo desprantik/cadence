@@ -76,9 +76,9 @@
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    grid-template-columns: 1fr;
     align-items: center;
-    gap: 56px;
+    gap: 48px;
     padding: 56px 0 40px;
   }
 
@@ -199,6 +199,15 @@
     gap: 40px;
     padding-top: 48px;
     border-top: 1px solid rgba(0,0,0,.15);
+  }
+
+  .cover-nav,
+  .cover-body,
+  .cover-meta {
+    width: 100%;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .cover-meta-item { display: flex; flex-direction: column; gap: 4px; }
