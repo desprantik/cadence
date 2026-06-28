@@ -1,0 +1,343 @@
+.session-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+  min-height: calc(100vh - 57px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.session-page > .social-proof {
+  margin-bottom: 4px;
+}
+
+.byte-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.session-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.session-header__progress {
+  flex: 1;
+}
+
+.session-header__step {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.session-header__bar {
+  display: flex;
+  gap: 6px;
+}
+
+.session-header__segment {
+  flex: 1;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--border);
+  transition: background 0.3s;
+}
+
+.session-header__segment--done {
+  background: var(--black);
+}
+
+.soft-timer {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.soft-timer__label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.session-main {
+  flex: 1;
+}
+
+.byte-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.byte-card__topic {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.byte-card__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.byte-card__body {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--black);
+}
+
+.byte-card__video {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: var(--border);
+}
+
+.byte-card__thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.byte-card__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.byte-card__quiz-q {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.byte-card__options {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.byte-card__option {
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--white);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.byte-card__option:hover:not(:disabled) {
+  border-color: var(--black);
+}
+
+.byte-card__option--correct {
+  border-color: #2a9d5c;
+  background: #e8f5ee;
+}
+
+.byte-card__option--wrong {
+  border-color: #d64545;
+  background: #fdeaea;
+}
+
+.byte-card__feedback {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.byte-card__feedback--correct {
+  color: #1f7a4a;
+}
+
+.byte-card__feedback--wrong {
+  color: #c0392b;
+}
+
+.byte-card__btn {
+  align-self: flex-start;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: var(--black);
+  color: var(--white);
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.2s;
+}
+
+.byte-card__btn:hover:not(:disabled) {
+  background: #333;
+}
+
+.byte-card__btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.byte-card__btn:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 2px;
+}
+
+.session-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.session-footer__topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.session-footer__hint {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.session-page__finishing {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  min-height: 320px;
+}
+
+.session-page__finishing-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.session-page__finishing-sub {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Celebration overlay */
+.celebration-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(17, 17, 17, 0.45);
+  animation: celebration-fade-in 0.4s ease;
+}
+
+.celebration-overlay__card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 32px 40px;
+  text-align: center;
+  max-width: 400px;
+  margin: 24px;
+  animation: celebration-pop 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.celebration-overlay__eyebrow {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.celebration-overlay__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.celebration-overlay__sub {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.celebration-overlay__rank {
+  font-size: 13px;
+  color: var(--black);
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.celebration-overlay__card .social-proof {
+  justify-content: center;
+}
+
+.streak-delta {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f7a4a;
+  margin-left: 6px;
+  animation: delta-fade 2s ease forwards;
+}
+
+@keyframes celebration-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes celebration-pop {
+  from { opacity: 0; transform: scale(0.92) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes delta-fade {
+  0% { opacity: 1; transform: translateY(0); }
+  70% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-4px); }
+}
+
+@media (max-width: 480px) {
+  .session-page {
+    padding: 16px 16px 40px;
+  }
+
+  .byte-card {
+    padding: 18px;
+  }
+}
